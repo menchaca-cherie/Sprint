@@ -38,7 +38,7 @@ $tokenID = generateToken();
 </div>
 <div class="row justify-content-center my-2" >
     <h3 class="mx-2">Token: </h3>
-    <h3 id="tokenDisplay"><?php echo $tokenID; ?></h3>
+    <h3 id="tokenDisplay"><?php echo $tokenID;  ?></h3>
 </div>
 <!--Form id, action, method-->
 <form id="student_schedule" action="confirmation.html" method="post">

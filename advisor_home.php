@@ -16,12 +16,6 @@
     <a href="student_schedule.php" class="btn btn-outline-primary">Create New Schedule</a>
   </div>
   <form action="" method="get">
-    <div class="position-relative text-center my-5">
-      <label>Token: </label>
-      <input type="text" id="tokenID" value="<?php if (isset($_GET['tokenID'])) {
-                    echo $_GET['tokenID'];
-                } ?>" class="form">
-    </div>
     <div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </div>
@@ -31,27 +25,8 @@
       <div class="col-md-12">
         <hr>
 
-        <?php
 
-                    include("./php/connect.php");
-                    $tokenID = "";
-                    if (!isset($_GET['tokenID'])) {
-                        include("php/connect.php");
-                        $tokenID = $_GET['tokenID'];
-                        $query = "SELECT * FROM advise_it WHERE tokenID = '$tokenID'";
-                        $query_run = mysqli_query($cnxn, $query);
-                        //if statement
-                            if(mysqli_num_rows($query_run) > 0){
-        foreach ($query_run as $row) {
 
-        echo $row['fall'] ;
-        }
-        }
-        } else {
-        echo "Something happened!";
-
-        }
-        ?>
       </div>
     </div>
   </form>
